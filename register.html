@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Club | Register</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>University Sports Club</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="register.html" class="active">Register</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Register for an Event</h2>
+
+      <form id="regForm">
+
+        <fieldset>
+          <legend>Your Details</legend>
+
+          <label for="fullname">Full name</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Your full name" required minlength="3">
+
+          <label for="email">University email</label>
+          <input type="email" id="email" name="email" placeholder="name@university.edu" required>
+
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" placeholder="03001234567" pattern="[0-9]{11}" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Event</legend>
+
+          <label for="event">Choose an event</label>
+          <select id="event" name="event" required>
+            <option value="">-- Select an event --</option>
+            <option value="Inter-Department Cricket Cup">Inter-Department Cricket Cup</option>
+            <option value="Football Friendly Match">Football Friendly Match</option>
+            <option value="Badminton Tournament">Badminton Tournament</option>
+            <option value="Fitness and Training Workshop">Fitness and Training Workshop</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>How did you hear about us?</legend>
+
+          <input type="radio" id="friend" name="source" value="Friend" checked>
+          <label for="friend">Friend</label>
+
+          <input type="radio" id="social" name="source" value="Social media">
+          <label for="social">Social media</label>
+
+          <input type="radio" id="poster" name="source" value="Poster">
+          <label for="poster">Poster</label>
+        </fieldset>
+
+        <button type="submit">Register</button>
+      </form>
+
+      <p id="message"></p>
+    </section>
+
+    <section>
+      <h2>Saved Registrations</h2>
+      <ul id="list"></ul>
+      <button type="button" id="clearBtn">Clear all</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>2026 University Sports Club</p>
+  </footer>
+
+</body>
+</html>
