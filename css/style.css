@@ -39,7 +39,7 @@ a:hover {
 /* ===== Part 2: Header and navigation ===== */
 
 header {
-  background-color: #14213d;
+  background-color: #000103;
   padding: 20px;
   text-align: center;
 }
@@ -86,4 +86,88 @@ nav > a.active {
 a:focus, input:focus, select:focus, button:focus {
   outline: 3px solid #fca311;
   outline-offset: 2px;
+}
+
+/* ===== Part 3: Cards and content ===== */
+
+section {
+  margin-bottom: 30px;
+}
+
+/* Flexbox: puts the event cards side by side */
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+}
+
+/* Class selector: the card look */
+.card {
+  flex: 1 1 220px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Featured event on the Home page (single card) */
+section > .card {
+  max-width: 500px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* Attribute selector: links that start with https */
+a[href^="https"] {
+  font-weight: bold;
+}
+
+/* Id selector: used on the register page message later */
+#message {
+  color: #15803d;
+  font-weight: bold;
+}
+
+/* Aside box */
+aside {
+  background-color: #fff7e6;
+  border: 2px solid #fca311;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+aside h2 {
+  margin-top: 0;
+}
+
+/* Figure and image */
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+figcaption {
+  font-size: 15px;
+  color: #555555;
+  margin-top: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: #14213d;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
 }
