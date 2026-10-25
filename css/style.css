@@ -35,3 +35,55 @@ a {
 a:hover {
   color: #c2410c;
 }
+
+/* ===== Part 2: Header and navigation ===== */
+
+header {
+  background-color: #14213d;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Grouping + descendant selector: h1 inside header */
+header h1 {
+  color: #ffffff;
+  margin: 0 0 15px 0;
+}
+
+/* Flexbox: puts the links in one row */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Child selector: only links directly inside nav */
+nav > a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 18px;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+}
+
+nav > a:hover {
+  background-color: #fca311;
+  border-color: #fca311;
+  color: #14213d;
+}
+
+/* Class selector: the page you are on */
+nav > a.active {
+  background-color: #fca311;
+  border-color: #fca311;
+  color: #14213d;
+  font-weight: bold;
+}
+
+/* Visible focus for keyboard users (accessibility) */
+a:focus, input:focus, select:focus, button:focus {
+  outline: 3px solid #fca311;
+  outline-offset: 2px;
+}
